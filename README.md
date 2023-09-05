@@ -44,6 +44,6 @@ OS name: "linux", version: "6.4.13-200.fc38.x86_64", arch: "amd64", family: "uni
 ```
 
 Results:
-* Primed local repository: https://baseline-3-9-4.tiiny.site/
+* Primed local repository: [link](baseline-3.9.4-elr/timeline.html)
 * Empty local repository: TBD
 
