@@ -1,8 +1,9 @@
 # Resolver changes test
 
-apache Camel https://github.com/apache/camel  
-Commit building 3d3a687e0ceb749791bb96d6aaf498454e064ff2
+Apache Camel https://github.com/apache/camel  
+Commit built: 3d3a687e0ceb749791bb96d6aaf498454e064ff2
 
+Diff to master branch:
 ```diff
 diff --git a/.mvn/extensions.xml b/.mvn/extensions.xml
 index 594ee3553dc..8d37a146c16 100644
@@ -43,7 +44,27 @@ OS name: "linux", version: "6.4.13-200.fc38.x86_64", arch: "amd64", family: "uni
 [cstamas@urnebes camel (main *%)]$ 
 ```
 
-Results:
-* Primed local repository: [link](baseline-3.9.4-elr/timeline.html)
-* Empty local repository: TBD
+### Empty Local Repository
+
+Empty local repository, everything is resolved and downloaded from local Proximity.
+
+```
+mvn -D maven.repo.local=local clean install -Dquickly -b smart -T4
+```
+
+[Timeline](baseline-3.9.4-elr/timeline.html)
+[Timeline (noop locking used)](baseline-3.9.4-elr-noop/timeline.html)
+[Timeline (file-lock used)](baseline-3.9.4-elr-file/timeline.html)
+
+### Primed Local Repository
+
+Primed local repository, everything is resolved, no remote access happens.
+
+```
+mvn -D maven.repo.local=local clean install -Dquickly -b smart -T4
+```
+
+[Timeline](baseline-3.9.4-plr/timeline.html)
+[Timeline (noop locking used)](baseline-3.9.4-plr-noop/timeline.html)
+[Timeline (file-lock used)](baseline-3.9.4-plr-file/timeline.html)
 
