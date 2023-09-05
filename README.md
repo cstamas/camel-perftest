@@ -52,9 +52,10 @@ Empty local repository, everything is resolved and downloaded from local Proximi
 mvn -D maven.repo.local=local clean install -Dquickly -b smart -T4
 ```
 
-[Timeline](baseline-3.9.4-elr/timeline.html)
-[Timeline (noop locking used)](baseline-3.9.4-elr-noop/timeline.html)
-[Timeline (file-lock used)](baseline-3.9.4-elr-file/timeline.html)
+Results:
+* [Timeline](baseline-3.9.4-elr/timeline.html)
+* [Timeline (noop locking used)](baseline-3.9.4-elr-noop/timeline.html)
+* [Timeline (file-lock used)](baseline-3.9.4-elr-file/timeline.html)
 
 ### Primed Local Repository
 
@@ -64,7 +65,8 @@ Primed local repository, everything is resolved, no remote access happens.
 mvn -D maven.repo.local=local clean install -Dquickly -b smart -T4
 ```
 
-[Timeline](baseline-3.9.4-plr/timeline.html)
-[Timeline (noop locking used)](baseline-3.9.4-plr-noop/timeline.html)
-[Timeline (file-lock used)](baseline-3.9.4-plr-file/timeline.html)
+Results:
+* [Timeline](baseline-3.9.4-plr/timeline.html)
+* [Timeline (noop locking used)](baseline-3.9.4-plr-noop/timeline.html)
+* [Timeline (file-lock used)](baseline-3.9.4-plr-file/timeline.html)
 
